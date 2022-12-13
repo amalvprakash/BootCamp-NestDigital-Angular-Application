@@ -1,0 +1,45 @@
+<div class="container">
+    <div class="row g-3">
+        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+
+            <div class="row g-3">
+                private int empId;
+    private String leaveFrom;
+    private String leaveTo;
+    private String reason;
+    private String catagory;
+    private String status;
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                    <label for="" class="form-label">Employee Id</label>
+                    <input type="text" name="empId" [(ngModel)]="empId"  class="form-control">
+                </div>
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                    <label for="" class="form-label">Leave From Date</label>
+                    <input type="date" name="leaveFrom" [(ngModel)]="leaveFrom" class="form-control">
+                </div>
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                    <label for="" class="form-label">Leave To Date</label>
+                    <input type="text" name="leaveTo" [(ngModel)]="leaveTo"  class="form-control">
+                </div>
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                    <label for="" class="form-label">Reason</label>
+                    <input type="text" name="reason" [(ngModel)]="reason"  class="form-control">
+                </div>
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                    <label for="" class="form-label">Catagory</label>
+                    <input type="text" name="catagory" [(ngModel)]="catagory"  class="form-control">
+                </div>
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                    <label for="" class="form-label">Status</label>
+                    <input type="text" name="status" [(ngModel)]="status"  class="form-control">
+                </div>
+                
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                    <button (click)="Reg()" class="btn btn-primary">Log in</button>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>
