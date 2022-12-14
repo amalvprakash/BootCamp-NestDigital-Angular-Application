@@ -17,7 +17,7 @@ export class ApiService {
     return this.http.post("http://localhost:8080/employeeEntry",dataToSend)
   }
   LeaveRequest =(dataToSend:any) =>{
-    return this.http.post("http://localhost:8080/LeaveApply",dataToSend)
+    return this.http.post("http://localhost:8080/leaveApply",dataToSend)
   }
   Visitor =(dataToSend:any) =>{
     return this.http.post("http://localhost:8080/visitor",dataToSend)
@@ -33,5 +33,29 @@ export class ApiService {
   }
   DeleteSecurityGuards =(dataToSend:any) =>{
     return this.http.post("http://localhost:8080/deleteSecurityGuards",dataToSend)
+  }
+  EmployeeLogin =(dataToSend:any) =>{
+    return this.http.post("http://localhost:8080/employeeLogin",dataToSend)
+  }
+  Profile =(dataToSend:any) =>{
+    return this.http.post("http://localhost:8080/profile",dataToSend)
+  }
+  ViewLeave =(dataToSend:any) =>{
+    return this.http.post("http://localhost:8080/viewEmployeeLeaves",dataToSend)
+  }
+  ViewLeaveRequests =() =>{
+    return this.http.get("http://localhost:8080/viewLeaveRequests")
+  }
+  UpdateLeaveRequests = (dataToSend:any) =>{
+    return this.http.post("http://localhost:8080/updateLeave",dataToSend)
+  }
+  SecurityLogin =(dataToSend:any) =>{
+    return this.http.post("http://localhost:8080/securityLogin",dataToSend)
+  }
+  ViewAllVisitors =() =>{
+    return this.http.get("http://localhost:8080/viewAllVisitors")
+  }
+  SearchVisitor =(dataToSend:any) =>{
+    return this.http.post("http://localhost:8080/searchVisitor",dataToSend)
   }
 }

@@ -16,6 +16,17 @@ import { VisitorComponent } from './visitor/visitor.component';
 import { AdminHomeComponent } from './admin-home/admin-home.component';
 import { SearchEmployeeComponent } from './search-employee/search-employee.component';
 import { SearchSecurityGuardComponent } from './search-security-guard/search-security-guard.component';
+import { EmployeeLoginComponent } from './employee-login/employee-login.component';
+import { EmployeeHomeComponent } from './employee-home/employee-home.component';
+import { EmployeeNavbarComponent } from './employee-navbar/employee-navbar.component';
+import { EmployeeProfileComponent } from './employee-profile/employee-profile.component';
+import { EmployeeViewLeavesComponent } from './employee-view-leaves/employee-view-leaves.component';
+import { AdminLeaveApproveComponent } from './admin-leave-approve/admin-leave-approve.component';
+import { SecurityLeaveComponent } from './security-leave/security-leave.component';
+import { SecurityLoginComponent } from './security-login/security-login.component';
+import { SecurityHomeComponent } from './security-home/security-home.component';
+import { SecurityNavbarComponent } from './security-navbar/security-navbar.component';
+import { ViewAllVisitorsComponent } from './view-all-visitors/view-all-visitors.component';
 
 const myRoute:Routes = [
   {
@@ -35,6 +46,10 @@ const myRoute:Routes = [
     component:AdminAddSecurityComponent
   },
   {
+    path : "leaveRequest",
+    component:AdminLeaveApproveComponent
+  },
+  {
     path : "employeeEntry",
     component:AdminAddEmployeesComponent
   },
@@ -47,12 +62,48 @@ const myRoute:Routes = [
     component:VisitorComponent
   },
   {
+    path : "employeeEntrySecurity",
+    component:AdminAddemployeeEntryComponent
+  },
+  {
     path : "searchEmployee",
     component:SearchEmployeeComponent
   },
   {
     path : "searchSecurity",
     component:SearchSecurityGuardComponent
+  },
+  {
+    path : "employeeLogin",
+    component:EmployeeLoginComponent
+  },
+  {
+    path : "employeeHome",
+    component:EmployeeHomeComponent
+  },
+  {
+    path : "employeeProfile",
+    component:EmployeeProfileComponent
+  },
+  {
+    path : "leaveEntry",
+    component:LeaveEntryComponent
+  },
+  {
+    path : "viewLeave",
+    component:EmployeeViewLeavesComponent
+  },
+  {
+    path : "securitylogin",
+    component:SecurityLoginComponent
+  },
+  {
+    path : "securityHome",
+    component:SecurityHomeComponent
+  },
+  {
+    path : "viewallVisitors",
+    component:ViewAllVisitorsComponent
   }
   
 ]
@@ -68,7 +119,18 @@ const myRoute:Routes = [
     VisitorComponent,
     AdminHomeComponent,
     SearchEmployeeComponent,
-    SearchSecurityGuardComponent
+    SearchSecurityGuardComponent,
+    EmployeeLoginComponent,
+    EmployeeHomeComponent,
+    EmployeeNavbarComponent,
+    EmployeeProfileComponent,
+    EmployeeViewLeavesComponent,
+    AdminLeaveApproveComponent,
+    SecurityLeaveComponent,
+    SecurityLoginComponent,
+    SecurityHomeComponent,
+    SecurityNavbarComponent,
+    ViewAllVisitorsComponent
   ],
   imports: [
     BrowserModule,
