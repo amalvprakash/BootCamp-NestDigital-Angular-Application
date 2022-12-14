@@ -1,0 +1,91 @@
+<app-security-navbar></app-security-navbar>
+<div class="container">
+    <div class="row">
+        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+            
+            <div class="row g-3">
+
+
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        Search By Date
+                    </button>
+                    
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-xl">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="exampleModalLabel">Search By Date</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                                    <label for="" class="form-label">Date</label>
+                                    <input type="date" name="date" [(ngModel)]="date"  class="form-control">
+                                </div>
+                                
+                                    <table class="table table-dark table-striped">
+                                        <thead>
+                                        <tr>
+                                            <th scope="col">Name</th>
+                                            <th scope="col">Purpose</th>
+                                            <th scope="col">Whome To Visit</th>
+                                            <th scope="col">Time Of Entry</th>
+                                            <th scope="col">Time Of Exit</th>
+                                            <th scope="col">Date</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr *ngFor="let i of searchData">
+                                            <th>{{i.name}}</th>
+                                            <td>{{i.purpose}}</td>
+                                            <td>{{i.whom}}</td>
+                                            <td>{{i.entryTime}}</td>
+                                            <td>{{i.exitTime}}</td>
+                                            <td>{{i.date}}</td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+
+
+                            </div>
+                            <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button" (click)="Search()" class="btn btn-primary">Search</button>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+        
+    
+
+                <table class="table table-dark table-striped">
+                    <thead>
+                      <tr>
+                        <th scope="col">Name</th>
+                        <th scope="col">Purpose</th>
+                        <th scope="col">Whome To Visit</th>
+                        <th scope="col">Time Of Entry</th>
+                        <th scope="col">Time Of Exit</th>
+                        <th scope="col">Date</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr *ngFor="let i of userData">
+                        <th>{{i.name}}</th>
+                        <td>{{i.purpose}}</td>
+                        <td>{{i.whom}}</td>
+                        <td>{{i.entryTime}}</td>
+                        <td>{{i.exitTime}}</td>
+                        <td>{{i.date}}</td>
+                      </tr>
+                    </tbody>
+                  </table>
+            </div> 
+
+        </div>
+    </div>
+</div>

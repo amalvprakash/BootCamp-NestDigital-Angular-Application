@@ -12,6 +12,7 @@ export class VisitorComponent {
   whom = ""
   entryTime = ""
   exitTime = ""
+  date = ""
 
   constructor(private api:ApiService){}
   Reg = () =>{
@@ -20,7 +21,8 @@ export class VisitorComponent {
       "purpose" : this.purpose,
       "whom" : this.whom,
       "exitTime" : this.exitTime,
-      "entryTime" : this.entryTime
+      "entryTime" : this.entryTime,
+      "date" : this.date
     }
     this.api.Visitor(data).subscribe(
       (response:any) =>{

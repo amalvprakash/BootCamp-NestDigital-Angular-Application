@@ -12,7 +12,7 @@ export class LeaveEntryComponent {
   leaveTo = ""
   reason = ""
   catagory = ""
-  status = ""
+  status = "pending"
 
   constructor(private api:ApiService){}
   Reg = () => {
